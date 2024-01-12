@@ -1,0 +1,27 @@
+#environment
+myenv/
+env/
+venv/
+.env
+
+#Python
+*.log
+*.pot
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyc
+*.pyo
+*.pyc
+*.pyo
+*.pyd
+*.pyw
+
+#django
+/migrations/
+*.sqlite3
+
+# System files
+.DS_Store
+Thumbs.db

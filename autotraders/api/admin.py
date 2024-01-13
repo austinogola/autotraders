@@ -7,16 +7,18 @@ class BidderAdmin(admin.ModelAdmin):
 
     def save_model(self, request, obj, form, change):
         print(obj)
-        # print(form)
-        # print(change)
-        # print(request)
+        coport_object={}
+        username=f'{obj.name.lower()}_{obj.surname.lower()}'
+        email=obj.email
+        password=obj.password
+        for number in obj.copart_accounts:
+  	        #Add to coparts
+            print(number)
+
         
-        # Custom processing before saving the instance
-        # For example, modify some fields based on the incoming data
-        # obj.username = obj.username.upper()  # Convert username to uppercase before saving
 
         # Call the original save_model method to save the instance
-        # super().save_model(request, obj, form, change)
+        super().save_model(request, obj, form, change)
 
 
 admin.site.register(Bidder, BidderAdmin)
